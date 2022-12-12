@@ -1,0 +1,101 @@
+\chapter{支点が鉛直に振動している単振子}
+
+\section{モデルの定式化}
+
+\begin{comment}
+    \begin{figure}[htbp]
+        \begin{minipage}[b]{0.45\linewidth}
+          \centering
+          \includegraphics[keepaspectratio, scale=0.6]{vertical.eps}
+          \caption{支点が鉛直に振動している単振子}
+        \end{minipage}
+        %\begin{minipage}[b]{0.45\linewidth}
+          %\centering
+          %\includegraphics[keepaspectratio, scale=0.35]{p13-2.eps}
+          %\caption{p13-2}
+        %\end{minipage}
+      \end{figure}
+\end{comment}
+
+支点が鉛直方向に$a\cos\gamma t$にしたがって振動している単振子
+
+単振子の座標は、$(l\sin\varphi,l\cos\varphi)$なので、質点$m$の座標は、$x= l\sin\varphi, y = a\cos\gamma t + l\cos\varphi$
+
+次の準備をしておいて
+
+\begin{align*}
+   \dot{x} &= l\dot{\varphi}\cos\varphi \quad , \quad \dot{y}=-a\gamma\sin\gamma t - l\dot{\varphi}\sin\varphi\\
+   \dot{x}^2 &= l^2\dot{\varphi}^2\cos^2\varphi \quad , \quad \dot{y}^2 = a^2\gamma^2\sin^2\gamma t +2a\gamma l \dot{\varphi}\sin\gamma t \sin\varphi + l^2\dot{\varphi}^2\sin^2\varphi
+\end{align*}
+
+運動エネルギー$T$とポテンシャル・エネルギー$U$は次の通り
+（$\sin^2\alpha+\cos^2\alpha=1$）
+
+\begin{align*}
+   T &= \frac{m}{2}\left(\dot{x}^2+\dot{y}^2\right)\\
+   &=\frac{m}{2}\left(l^2\dot{\varphi}^2\left(\sin^2\varphi+\cos^2\varphi\right) +a^2\gamma^2\sin^2\gamma t + 2a\gamma l \dot{\varphi}\sin\gamma t\sin\varphi\right)\\
+   &=\frac{m}{2}l^2\dot{\varphi}^2 + ma\gamma l\dot{\varphi}\sin\gamma t\sin\varphi + \frac{m}{2}a^2\gamma^2\sin^2\gamma t\\
+   U &= -mgy\\&=-mg(a\cos\gamma t +l\cos\varphi)\\&=-mga\cos\gamma t - mgl\cos\varphi
+\end{align*}
+
+ラグランジアン$L=T-U$を求める.
+
+\begin{align*}
+   L &= T-U\\
+   &=\frac{m}{2}l^2\dot{\varphi}^2 + ma\gamma l\dot{\varphi}\sin\gamma t\sin\varphi + \frac{m}{2}a^2\gamma^2\sin^2\gamma t + mga\cos\gamma t + mgl\cos\varphi\\
+   &=\frac{m}{2}l^2\dot{\varphi}^2 +\left(ma\gamma^2l\cos\gamma t\cos\varphi -ma\gamma l\frac{d}{dt}(\cos\varphi\sin\gamma t)\right)\\
+   &\qquad \qquad \qquad \qquad\quad \quad  +\frac{m}{2}a^2\gamma^2\sin^2\gamma t + mga\cos\gamma t +mgl\cos\varphi\\&=\frac{m}{2}l^2\dot{\varphi}^2+ma\gamma^2l\cos\gamma t\cos\varphi + mgl\cos\varphi\\
+   &\qquad \qquad +\left(-ma\gamma l\frac{d}{dt}(\cos\varphi\sin\gamma t) + \frac{m}{2}a^2\gamma^2\sin^2\gamma t + mga\cos\gamma t \right)
+\end{align*}
+
+ここで、次の関係を使っている.
+\begin{align*}
+   -ma\gamma l\frac{d}{dt}(\cos\varphi\sin\gamma t) &= -ma\gamma l\left( -\dot{\varphi}\sin\varphi\sin\gamma t +\gamma\cos\varphi\cos\gamma t \right)\\
+   &= ma\gamma l\dot{\varphi}\sin\gamma t\sin\varphi - ma\gamma^2l\cos\gamma t\cos\varphi
+\end{align*}
+
+更に、次の関数$f(\varphi,t)$を用意すると、
+
+\[f(\varphi,t)=-ma\gamma l\cos\varphi\sin\gamma t + \displaystyle\frac{1}{4}ma^2\gamma^2t - \frac{1}{8}ma^2\gamma\sin 2\gamma t + mga\frac{1}{\gamma}\sin\gamma t\]
+
+ラグランジアンの最後の括弧内の部分は、関数$f(\varphi,t)$の時間に関する完全導関数になっている.（$\cos2\alpha=1-2\sin^2\alpha$）
+
+\begin{align*}
+   \frac{df(\varphi,t)}{dt}&=-ma\gamma l(-\dot{\varphi}\sin\varphi\sin\gamma t + \gamma\cos\varphi\cos\gamma t) +\frac{1}{4}ma^2\gamma^2 - \frac{1}{8}ma^2\gamma 2\gamma \cos2\gamma t + mga\frac{1}{\gamma}\gamma\cos\gamma t\\
+   &= -ma\gamma l\frac{d}{dt}(\cos\varphi\sin\gamma t) + \frac{1}{4}ma^2\gamma^2 - \frac{1}{4}ma^2\gamma^2(1-2\sin^2\gamma t) + mga\cos\gamma t\\
+   &= -ma\gamma l\frac{d}{dt}(\cos\varphi\sin\gamma t) + \frac{1}{4}ma^2\gamma^2 2\sin^2\gamma t + mga\cos\gamma t\\
+   &= -ma\gamma l\frac{d}{dt}(\cos\varphi\sin\gamma t) + \frac{m}{2}a^2\gamma^2\sin^2\gamma t +mga\cos\gamma t
+\end{align*}
+
+従って、最終的なLagrangianは、（時間に関する完全導関数の部分を除いて）
+
+\[L=\displaystyle\frac{ml^2}{2}\dot{\varphi}^2 + ma\gamma^2l\cos\gamma t\cos\varphi + mgl\cos\varphi\]
+
+次の計算から
+
+\begin{align*}
+   \displaystyle\frac{\partial L}{\partial \dot{\varphi}}&=ml^2\dot{\varphi}\\
+   \frac{\partial L}{\partial \varphi}&=-mla\gamma^2\cos\gamma t\sin\varphi -mgl\sin\varphi
+\end{align*}
+
+Euler-Lagrange eq.は
+
+\begin{align*}
+   \ddot{\varphi}=-\frac{a\gamma^2}{l}\cos\gamma t\sin\varphi - \frac{g}{l}\sin\varphi
+\end{align*}
+
+\section{Pythonによる模擬実験}
+
+これを連立の一階微分方程式に直すと
+
+\begin{align*}
+   \frac{\mathrm{d}\varphi}{\mathrm{d}t} &= \dot{\varphi}\\
+   \frac{\mathrm{d}\dot{\varphi}}{\mathrm{d}t} &= -\frac{a\gamma^2}{l}\cos\gamma t\sin\varphi - \frac{g}{l}\sin\varphi
+\end{align*}
+
+質点の座標は
+
+\[x=l\sin\varphi \qquad,\quad y=a\cos\gamma t + l\cos\varphi\]
+
+\lstset{escapechar=@,style=custompy}
+\lstinputlisting[caption=支点が鉛直に振動している単振子,label=pythonProgram5]{vertical.py}

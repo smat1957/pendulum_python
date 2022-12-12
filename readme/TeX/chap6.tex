@@ -1,0 +1,97 @@
+\chapter{支点が水平に振動している単振子}
+
+\section{モデルの定式化}
+
+\begin{comment}
+    \begin{figure}[htbp]
+        \begin{minipage}[b]{0.45\linewidth}
+          \centering
+          \includegraphics[keepaspectratio, scale=0.6]{horizontal.eps}
+          \caption{支点が水平に振動している単振子}
+        \end{minipage}
+        %\begin{minipage}[b]{0.45\linewidth}
+          %\centering
+          %\includegraphics[keepaspectratio, scale=0.35]{p13-2.eps}
+          %\caption{p13-2}
+        %\end{minipage}
+      \end{figure}
+\end{comment}
+
+単振子の座標は、$(l\sin\varphi,l\cos\varphi)$なので、質点$m$の座標は、
+
+\[x=a\cos\gamma t + l\sin\varphi, y = l\cos\varphi\]
+
+予め次の計算の準備をしておいて、
+
+\begin{align*}
+   \dot{x} &= -a\gamma\sin\gamma t +l\dot{\varphi}\cos\varphi \quad,\quad \dot{y} = -l\dot{\varphi}\sin\varphi\\
+   \dot{x}^2 &= a^2\gamma^2\sin^2\gamma t - 2a\gamma l\dot{\varphi}\sin\gamma t\cos\varphi + l^2\dot{\varphi}^2\cos^2\varphi\quad,\quad \dot{y}^2 =l^2\dot{\varphi}^2\sin^2\varphi
+\end{align*}
+
+運動エネルギー$T$とポテンシャル・エネルギー$U$は次のようになる（$\sin^2\alpha+\cos^2\alpha=1$を使って）
+
+\begin{align*}
+   T &= \frac{m}{2}(\dot{x}^2+\dot{y}^2)\\
+   &=\frac{m}{2}l^2\dot{\varphi}^2\left(\sin^2\varphi+\cos^2\varphi\right) -ma\gamma l\dot{\varphi}\sin\gamma t\cos\varphi + \frac{m}{2}a^2\gamma^2\sin^2\gamma t\\
+   &=\frac{m}{2}l^2\dot{\varphi}^2 -ma\gamma l\dot{\varphi}\sin\gamma t\cos\varphi + \frac{m}{2}a^2\gamma^2\sin^2\gamma t\\
+   U &= -mgy = -mgl\cos\varphi
+\end{align*}
+
+ラグランジアン$ L=T-U $を求めていく.
+
+\begin{align*}
+   L &= T-U\\&=\frac{m}{2}l^2\dot{\varphi}^2 -ma\gamma l\dot{\varphi}\sin\gamma t\cos\varphi + \frac{m}{2}a^2\gamma^2\sin^2\gamma t + mgl\cos\varphi\\
+   &= \frac{m}{2}l^2\dot{\varphi}^2 + \left(ma\gamma^2l \cos\gamma t\sin\varphi -ma\gamma l\frac{d}{dt}(\sin\varphi\sin\gamma t) \right) +\\
+   &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\frac{m}{2}a^2\gamma^2\sin^2\gamma t + mgl\cos\varphi\\
+   &= \frac{m}{2}l^2\dot{\varphi}^2 +ma\gamma^2l \cos\gamma t\sin\varphi +\\&\qquad\qquad\left(-ma\gamma l\frac{d}{dt}(\sin\varphi\sin\gamma t)\frac{m}{2}a^2\gamma^2\sin^2\gamma t\right) +  mgl\cos\varphi
+\end{align*}
+
+ここで、次の関係を使っている.
+
+\begin{align*}
+   -ma\gamma l\frac{d}{dt}\left(\sin\varphi\sin\gamma t\right)&= -ma\gamma l\left(\gamma\sin\varphi\cos\gamma t +\dot{\varphi}\cos\varphi\sin\gamma t\right)\\
+   &= -ma\gamma^2 l\sin\varphi\cos\gamma t - ma\gamma l\dot{\varphi}\cos\varphi\sin\gamma t
+\end{align*}
+
+更に、次の関数$f(\varphi,t)$を用意する、
+
+\[f(\varphi,t) = -ma\gamma l\sin\varphi\sin\gamma t + \displaystyle\frac{1}{4}ma^2\gamma^2 t - \frac{1}{8}ma^2\gamma\sin 2\gamma t\]
+
+ラグランジアンの最後の括弧内の部分は、関数$f(\varphi,t)$の時間に関する完全導関数になっている.（$\cos 2\alpha=1-2\sin^2\alpha$を使って）
+
+\begin{align*}
+   \frac{df(\varphi,t)}{dt} &= -ma\gamma l\frac{d}{dt}(\sin\varphi\sin\gamma t) + \frac{1}{4}ma^2\gamma^2 - \frac{1}{8}ma^2\gamma(2\gamma)\cos 2\gamma t\\
+   &= -ma\gamma l\frac{d}{dt}(\sin\varphi\sin\gamma t) + \frac{1}{4}ma^2\gamma^2 - \frac{1}{4}ma^2\gamma^2(1-2\sin^2\gamma t)\\&= -ma\gamma l\frac{d}{dt}(\sin\varphi\sin\gamma t) + \frac{1}{4}ma^2\gamma^2(2\sin^2\gamma t)\\
+   &= -ma\gamma l\frac{d}{dt}(\sin\varphi\sin\gamma t) + \frac{m}{2}a^2\gamma^2\sin^2\gamma t
+\end{align*}
+
+従って、最終的なLagrangianは、（時間に関する完全導関数を除いて）
+
+\[L=\displaystyle\frac{ml^2}{2}\dot{\varphi}^2+mla\gamma^2\cos\gamma t\sin\varphi + mgl\cos\varphi\]
+
+次の計算から,
+
+\begin{align*}
+   \frac{\partial L}{\partial \dot{\varphi}} &= ml^2\dot{\varphi}\\
+   \frac{\partial L}{\partial \varphi} &= mla\gamma^2\cos\gamma t\cos\varphi - mgl\sin\varphi
+\end{align*}
+
+Euler-Lagrange eq.は
+
+\[\ddot{\varphi}=\displaystyle\frac{a\gamma^2}{l}\cos\gamma t\cos\varphi - \frac{g}{l}\sin\varphi\]
+
+\section{Pythonによる模擬実験}
+
+これを連立の一階微分方程式に直すと
+
+\begin{align*}
+   \frac{\mathrm{d}\varphi}{\mathrm{d}t} &= \dot{\varphi}\\
+   \frac{\mathrm{d}\dot{\varphi}}{\mathrm{d}t} &= \frac{a\gamma^2}{l}\cos\gamma t\cos\varphi - \frac{g}{l}\sin\varphi
+\end{align*}
+
+質点の座標は
+
+\[x=a\cos\gamma t + l\sin\varphi \qquad,\quad y=l\cos\varphi\]
+
+\lstset{escapechar=@,style=custompy}
+\lstinputlisting[caption=支点が水平に振動している単振子,label=pythonProgram6]{horizontal.py}
