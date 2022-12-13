@@ -69,6 +69,6 @@ ani = FuncAnimation(fig, update, frames=np.arange(0, len(t)),
 #
 plt.show()
 FPS = 1000/FRAME_INTERVAL # frames per second
-#ani.save('pendulum5.mp4', fps=FPS, extra_args=['-vcodec', 'libx264'])
+#ani.save('vertical_move.mp4', fps=FPS, extra_args=['-vcodec', 'libx264'])
 # using the Pillow instead of the imagemagic for MovieWriter
-ani.save('pendulum5.gif', writer='Pillow', fps=FPS)
+ani.save('vertical_move.gif', writer='Pillow', fps=FPS)

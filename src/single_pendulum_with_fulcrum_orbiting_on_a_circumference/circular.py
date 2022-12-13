@@ -88,8 +88,8 @@ ani = FuncAnimation(fig, update, frames=np.arange(0, len(t)),
 plt.show()
 FPS = 1000/FRAME_INTERVAL # frames per second
 if CCW:
-    fname = 'pendulum4CCW'
+    fname = 'orbital_pendulum4CCW'
 else:
-    fname = 'pendulum4CW'
+    fname = 'orbital_pendulumCW'
 #ani.save(fname+'.mp4', fps=FPS, extra_args=['-vcodec', 'libx264'])
 ani.save(fname+'.gif', writer='imagemagick', fps=FPS)

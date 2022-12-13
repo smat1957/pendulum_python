@@ -71,4 +71,4 @@ ani = FuncAnimation(fig, update, frames=np.arange(0, len(t)),
 FPS = 1000/FRAME_INTERVAL        # frames per second
 plt.show()
 #ani.save('pendulum3.mp4', fps=FPS, extra_args=['-vcodec', 'libx264'])
-ani.save('pendulum3.gif', writer='imagemagick', fps=FPS)
+ani.save('movable_pendulum.gif', writer='imagemagick', fps=FPS)
