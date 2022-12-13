@@ -1,12 +1,16 @@
 \chapter{支点が円周上を周回している単振子}
 
+ランダウ、リフシッツ「力学」p13-14問題3(a)（図3）
+
+p14に書かれているLagrangianの式は誤り。
+
 \section{モデルの定式化}
 
 %\begin{comment}
     \begin{figure}[htbp]
         \begin{minipage}[b]{0.45\linewidth}
           \centering
-          \includegraphics[keepaspectratio, scale=0.5]{circular.eps}
+          \includegraphics[keepaspectratio, scale=0.5]{eps/circular.eps}
           \caption{支点が円周上を周回する単振子}
         \end{minipage}
         %\begin{minipage}[b]{0.45\linewidth}
@@ -180,4 +184,4 @@ Eular-Langange eq.
 模擬実験によって, CWとCCWの動きを確認することができる.わざわざ場合分けしてまでの記述をしているが, （当然の事ながら,） 一方の定式化だけにしておいて、定数GAMMAの符号を反転させても同じ現象になるよね.
 
 \lstset{escapechar=@,style=custompy}
-\lstinputlisting[caption=支点が円周上を周回する単振子,label=pythonProgram4]{circular.py}
+\lstinputlisting[caption=支点が円周上を周回する単振子,label=pythonProgram4]{py/circular.py}

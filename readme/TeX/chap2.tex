@@ -1,12 +1,14 @@
 \chapter{2重平面振子}
 
+ランダウ、リフシッツ「力学」p13問題1（図1）
+
 \section{モデルの定式化}
 
 %\begin{comment}
 \begin{figure}[htbp]
   \begin{minipage}[b]{0.45\linewidth}
     \centering
-    \includegraphics[keepaspectratio, scale=0.5]{double.eps}
+    \includegraphics[keepaspectratio, scale=0.5]{eps/double.eps}
     \caption{2重平面振子}
   \end{minipage}
   %\begin{minipage}[b]{0.45\linewidth}
@@ -94,4 +96,4 @@ m_2l_2^2\ddot{\varphi_2}+m_2l_1l_2\cos(\varphi_1-\varphi_2)\ddot{\varphi_1}-m_2l
 積分は,scipy.integrateのodeintを,アニメーションは,matplotlib.animationのFuncAnimationを使う.
 
 \lstset{escapechar=@,style=custompy}
-\lstinputlisting[caption=2重平面振子,label=pythonProgram2]{double.py}
+\lstinputlisting[caption=2重平面振子,label=pythonProgram2]{py/double.py}
