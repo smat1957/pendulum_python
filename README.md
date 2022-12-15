@@ -1,6 +1,6 @@
 # pendulum_python
 
-I tried to solve an end-of-chapter problem in chapter 1 of "Dynamics" (← highly acclaimed book), a theoretical physics textbook written by Landau and Lifshitz. I also tried to write a Python program to animate the result of the solution. It may be a correct answer because it moves in a way that seems to be the case.)
+I tried to solve an end-of-chapter problem in chapter 1 of "Dynamics" (← highly acclaimed book), a theoretical physics textbook written by Landau and Lifshitz. I also tried to write a Python program to animate the result of the solution. (It may be a correct answer because it moves in a way that seems to be the case.)
 
 (1) Ordinary single pendulum
 
