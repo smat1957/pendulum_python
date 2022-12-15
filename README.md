@@ -1,4 +1,21 @@
 # pendulum_python
+
+I tried to solve an end-of-chapter problem in chapter 1 of "Dynamics" (← highly acclaimed book), a theoretical physics textbook written by Landau and Lifshitz (not guaranteed to be correct). (There is no guarantee that it is correct.) I also tried to write a Python program to animate the result of the solution. (It may be a correct answer because it moves in a way that seems to be the case.)
+
+(1) Ordinary single pendulum
+
+(2) Double pendulum (Q1)
+
+(3) A single pendulum whose fulcrum is movable in the horizontal direction (Q2)
+
+(4) Single pendulum whose fulcrum is circumferential (Q3a)
+
+(5) A single pendulum whose fulcrum oscillates in the vertical direction (Q3c)
+
+(6) A single pendulum whose fulcrum is oscillating in the horizontal direction (Q3b)
+
+In the src folder, I put the Python program and the animated GIFs that are the result of its execution, and in the readme folder, I put a PDF with the procedure for solving the problem and its TeX source.
+
 ランダウとリフシッツによって著された理論物理学教程の
 「力学」（←名著として誉れ高い）第1章の章末問題を解いてみた。
 （正解になっている保証は無い）
